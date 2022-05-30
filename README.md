@@ -27,13 +27,13 @@ docker-compose exec php /usr/local/bin/composer install
 docker-compose exec php /usr/local/bin/composer dump-autoload -o
 ```
 
-### Générer une clé d’application
+### Создание ключа приложения
 
 ```
 docker-compose exec php php /var/www/html/artisan key:generate
 ```
 
-### Сгенерировать ключ приложения
+### Создание миграций для создания таблиц базы данных
 
 ```
 docker-compose exec php php /var/www/html/artisan migrate
@@ -54,7 +54,7 @@ http://localhost:8081/api/documentation
 ### Запускайте artisan команды с помощью docker-compose
 
 ```
-docker-compose exec php php /var/www/html/artisan command a execute
+docker-compose exec php php /var/www/html/artisan command (command - команда , которая нужна выполнить)
 ```
 
 ### Запускайте composer команды с помощью docker-compose
@@ -62,5 +62,5 @@ docker-compose exec php php /var/www/html/artisan command a execute
 ```
 docker-compose exec php /usr/local/bin/composer install
 docker-compose exec php /usr/local/bin/composer update
-docker-compose exec php /usr/local/bin/composer commande
+docker-compose exec php /usr/local/bin/composer command (command - команда , которая нужна выполнить)
 ```
