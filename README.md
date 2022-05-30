@@ -1,26 +1,26 @@
 # Notebook REST API
 
-### Installation
+### Установка
 
 ```
 git clone https://github.com/sensei95/fugr-laravel-notebook-api-with-docker.git
 cd fugr-laravel-notebook-api-with-docker
 ```
 
-### Configurer le fichier d'environnemen
+### Настроить файл среды
 
 ```
 cp .env.example .env
 ```
 
-### Exécutez l’application avec Docker Compose
+### Запустите приложение с помощью Docker Compose.
 
 ```
-docker-compose build
-docker-compose up -d
+docker-compose build (Создает образ приложения с помощью Dockerfile)
+docker-compose up -d (запустите службы, которые мы указали в файле docker-compose.yml)
 ```
 
-### Installer les dependences de l'application
+### Установить зависимости приложения
 
 ```
 docker-compose exec php /usr/local/bin/composer install
@@ -33,31 +33,31 @@ docker-compose exec php /usr/local/bin/composer dump-autoload -o
 docker-compose exec php php /var/www/html/artisan key:generate
 ```
 
-### Migrer la base de donnees
+### Сгенерировать ключ приложения
 
 ```
 docker-compose exec php php /var/www/html/artisan migrate
 ```
 
-### Web Server
+### Веб Сервер
 
 ```
 http://localhost:8081
 ```
 
-### API Swagger Documentation
+### Документация API Swagger
 
 ```
 http://localhost:8081/api/documentation
 ```
 
-### Executer les commandes artisan avec docker-compose
+### Запускайте artisan команды с помощью docker-compose
 
 ```
 docker-compose exec php php /var/www/html/artisan command a execute
 ```
 
-### Installer les dependences avec Composer
+### Запускайте composer команды с помощью docker-compose
 
 ```
 docker-compose exec php /usr/local/bin/composer install
