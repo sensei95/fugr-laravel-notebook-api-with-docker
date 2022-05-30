@@ -24,10 +24,10 @@ services:
         restart: unless-stopped
         tty: true
         environment:
-            MYSQL_DATABASE: docker_notebook_api
-            #            MYSQL_USERNAME: root
-            #            MYSQL_PASSWORD: root
-            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_USERNAME: ${DB_USERNAME}
+            MYSQL_PASSWORD: ${DB_DATABASE}
+            MYSQL_ROOT_PASSWORD: ${DB_DATABASE}
             MYSQL_SERVICE_TAG: dev
             MYSQL_SERVICE_NAME: mysql
         networks:

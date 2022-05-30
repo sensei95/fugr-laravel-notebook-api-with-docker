@@ -39,6 +39,19 @@ docker-compose exec php php /var/www/html/artisan key:generate
 docker-compose exec php php /var/www/html/artisan migrate
 ```
 
+### Тестирование результата
+
+#### Инструменты
+
+-   PHPUnit
+-   Postman
+
+### PHPUnit Команда
+
+```
+docker-compose exec php php /var/www/html/artisan test
+```
+
 ### Веб Сервер
 
 ```
